@@ -10,14 +10,14 @@ import cors from "cors";
 import axios from "axios";
 import archiver from "archiver";
 
-// const corsOptions = {
-//   // This MUST be the exact URL of your frontend. No trailing slash.
-//   origin: 'https://web-genie-ai-frontend.vercel.app', 
-//   methods: ['GET', 'POST', 'OPTIONS'], // Explicitly allow OPTIONS for preflight
-//   allowedHeaders: ['Content-Type', 'Authorization'], // Allow common headers
-// };
+const corsOptions = {
+  // This MUST be the exact URL of your frontend. No trailing slash.
+  origin: 'https://web-genie-ai-frontend.vercel.app', 
+  methods: ['GET', 'POST', 'OPTIONS'], // Explicitly allow OPTIONS for preflight
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow common headers
+};
 const app = express();
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 
 
@@ -33,7 +33,7 @@ interface FileItem {
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || "");
 
 
-app.use(cors());
+// app.use(cors());
 
 
 
