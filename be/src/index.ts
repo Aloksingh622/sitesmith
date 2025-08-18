@@ -12,7 +12,7 @@ import archiver from "archiver";
 
 const corsOptions = {
   // This MUST be the exact URL of your frontend. No trailing slash.
-  origin: 'https://sitesmith-forntend.vercel.app', 
+  origin: 'https://sitesmith.thealok.shop', 
   methods: ['GET', 'POST', 'OPTIONS'], // Explicitly allow OPTIONS for preflight
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow common headers
 };
